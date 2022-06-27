@@ -1,0 +1,6 @@
+vhdl work "mem.vhd"
+vhdl work "LS_Q.vhd"
+vhdl work "LS_M.vhd"
+vhdl work "comp_sub.vhd"
+vhdl work "Diviser.vhd"
+vhdl work "t_div.vhd"

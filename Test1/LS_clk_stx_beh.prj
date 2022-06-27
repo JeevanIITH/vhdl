@@ -1,0 +1,3 @@
+vhdl isim_temp "left_shift_8_bit.vhd"
+vhdl isim_temp "clock.vhd"
+vhdl isim_temp "LS_clk.vhd"

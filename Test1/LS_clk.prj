@@ -1,0 +1,3 @@
+vhdl work "left_shift_8_bit.vhd"
+vhdl work "clock.vhd"
+vhdl work "LS_clk.vhd"

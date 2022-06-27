@@ -1,0 +1,2 @@
+vhdtdtfi -lib work multiplier.vhd -prj Test1 -o mult_unsigned.spl -module mult_unsigned -template J:/xilinx_ise/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 mult_unsigned.spl D:/vhdl_test_ise-/Test1/mult_unsigned.sym 

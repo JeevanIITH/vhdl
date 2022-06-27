@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/four_bit_adder.xst" -ofn "D:/vhdl_test_ise-/Test1/four_bit_adder.syr" 
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/four_bit_adder.xst" -ofn "D:/vhdl_test_ise-/Test1/four_bit_adder.syr" 
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/four_bit_adder.xst" -ofn "D:/vhdl_test_ise-/Test1/four_bit_adder.syr" 
+vhdtdtfi -prj Test1 -o D:/vhdl_test_ise-/Test1/four_bit_adder.vhi -module four_bit_adder -template J:/xilinx_ise/14.1/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work one_bit_adder.vhd -lib work Two_bit_adder.vhd -lib work four_bit_adder.vhd 
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/four_bit_adder.xst" -ofn "D:/vhdl_test_ise-/Test1/four_bit_adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 four_bit_adder.ngc four_bit_adder.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o four_bit_adder_map.ncd four_bit_adder.ngd four_bit_adder.pcf 

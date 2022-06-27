@@ -1,0 +1,148 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: mul_t.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mul_t.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mul_t"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : mul_t
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\vhdl_test_ise-\Test1\sum.vhd" into library work
+Parsing entity <sum>.
+Parsing architecture <Behavioral> of entity <sum>.
+Parsing VHDL file "D:\vhdl_test_ise-\Test1\RS_q.vhd" into library work
+Parsing entity <RS_q>.
+Parsing architecture <Behavioral> of entity <rs_q>.
+Parsing VHDL file "D:\vhdl_test_ise-\Test1\left_shift_8_bit.vhd" into library work
+Parsing entity <left_shift_8_bit>.
+Parsing architecture <Behavioral> of entity <left_shift_8_bit>.
+Parsing VHDL file "D:\vhdl_test_ise-\Test1\clock.vhd" into library work
+Parsing entity <clock>.
+Parsing architecture <Behavioral> of entity <clock>.
+Parsing VHDL file "D:\vhdl_test_ise-\Test1\mul_t.vhd" into library work
+Parsing entity <mul_t>.
+Parsing architecture <Behavioral> of entity <mul_t>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <mul_t> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <clock> (architecture <Behavioral>) from library <work>.
+ERROR:HDLCompiler:890 - "D:\vhdl_test_ise-\Test1\clock.vhd" Line 45: wait statement without UNTIL clause not supported for synthesis
+Netlist clock(Behavioral) remains a blackbox, due to errors in its contents
+
+Elaborating entity <RS_q> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "D:\vhdl_test_ise-\Test1\RS_q.vhd" Line 45: str should be on the sensitivity list of the process
+
+Elaborating entity <left_shift_8_bit> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "D:\vhdl_test_ise-\Test1\left_shift_8_bit.vhd" Line 49: reset should be on the sensitivity list of the process
+
+Elaborating entity <sum> (architecture <Behavioral>) from library <work>.
+--> 
+
+Total memory usage is 4494332 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

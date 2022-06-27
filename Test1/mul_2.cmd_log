@@ -1,0 +1,4 @@
+vhdtdtfi -lib work sum.vhd -lib work RS_q.vhd -lib work left_shift_8_bit.vhd -lib work mul_2.vhd -prj Test1 -o mul_2.spl -module mul_2 -template J:/xilinx_ise/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 mul_2.spl D:/vhdl_test_ise-/Test1/mul_2.sym 
+vhdtdtfi -prj Test1 -o D:/vhdl_test_ise-/Test1/mul_2.vhi -module mul_2 -template J:/xilinx_ise/14.1/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work sum.vhd -lib work RS_q.vhd -lib work left_shift_8_bit.vhd -lib work mul_2.vhd 
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/mul_2.xst" -ofn "D:/vhdl_test_ise-/Test1/mul_2.syr" 

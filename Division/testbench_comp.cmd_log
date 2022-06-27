@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Division/testbench_comp.xst" -ofn "D:/vhdl_test_ise-/Division/testbench_comp.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 testbench_comp.ngc testbench_comp.ngd  
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Division/testbench_comp.xst" -ofn "D:/vhdl_test_ise-/Division/testbench_comp.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 testbench_comp.ngc testbench_comp.ngd  

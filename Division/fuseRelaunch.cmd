@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "D:/vhdl_test_ise-/Division/t_div_isim_beh.exe" -prj "D:/vhdl_test_ise-/Division/t_div_beh.prj" "work.t_div" 

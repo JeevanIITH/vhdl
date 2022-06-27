@@ -1,0 +1,7 @@
+[Inputs]
+reset
+clk
+=pin[7:0]=
+[Outputs]
+=pout[7:0]=
+[BiDir]

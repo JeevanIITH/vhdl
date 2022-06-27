@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Division/Diviser.xst" -ofn "D:/vhdl_test_ise-/Division/Diviser.syr" 

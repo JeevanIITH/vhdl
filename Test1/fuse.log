@@ -1,0 +1,25 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "D:/vhdl_test_ise-/Test1/mul_2_isim_beh.exe" -prj "D:/vhdl_test_ise-/Test1/mul_2_beh.prj" "work.mul_2" 
+ISim P.15xf (signature 0xc3576ebc)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/vhdl_test_ise-/Test1/sum.vhd" into library work
+Parsing VHDL file "D:/vhdl_test_ise-/Test1/RS_q.vhd" into library work
+Parsing VHDL file "D:/vhdl_test_ise-/Test1/left_shift_8_bit.vhd" into library work
+Parsing VHDL file "D:/vhdl_test_ise-/Test1/mul_2.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity RS_q [rs_q_default]
+Compiling architecture behavioral of entity left_shift_8_bit [left_shift_8_bit_default]
+Compiling architecture behavioral of entity sum [sum_default]
+Compiling architecture behavioral of entity mul_2
+Time Resolution for simulation is 1ps.
+Compiled 12 VHDL Units
+Built simulation executable D:/vhdl_test_ise-/Test1/mul_2_isim_beh.exe
+Fuse Memory Usage: 37132 KB
+Fuse CPU Usage: 624 ms

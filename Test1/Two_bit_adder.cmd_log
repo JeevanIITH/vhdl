@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/Two_bit_adder.xst" -ofn "D:/vhdl_test_ise-/Test1/Two_bit_adder.syr" 
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/Two_bit_adder.xst" -ofn "D:/vhdl_test_ise-/Test1/Two_bit_adder.syr" 
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/Two_bit_adder.xst" -ofn "D:/vhdl_test_ise-/Test1/Two_bit_adder.syr" 
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/Two_bit_adder.xst" -ofn "D:/vhdl_test_ise-/Test1/Two_bit_adder.syr" 
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/Two_bit_adder.xst" -ofn "D:/vhdl_test_ise-/Test1/Two_bit_adder.syr" 
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/Two_bit_adder.xst" -ofn "D:/vhdl_test_ise-/Test1/Two_bit_adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 Two_bit_adder.ngc Two_bit_adder.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Two_bit_adder_map.ncd Two_bit_adder.ngd Two_bit_adder.pcf 

@@ -1,0 +1,3 @@
+vhdtdtfi -lib work left_shift_8_bit.vhd -lib work clock.vhd -lib work LS_clk.vhd -prj Test1 -o LS_clk.spl -module LS_clk -template J:/xilinx_ise/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -prj Test1 -o D:/vhdl_test_ise-/Test1/LS_clk.vhi -module LS_clk -template J:/xilinx_ise/14.1/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work left_shift_8_bit.vhd -lib work clock.vhd -lib work LS_clk.vhd 
+vhdtdtfi -lib work left_shift_8_bit.vhd -lib work clock.vhd -lib work LS_clk.vhd -prj Test1 -o LS_clk.spl -module LS_clk -template J:/xilinx_ise/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 

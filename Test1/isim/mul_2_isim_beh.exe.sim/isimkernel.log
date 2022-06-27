@@ -1,0 +1,31 @@
+Command line:
+   mul_2_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  65299
+
+Wed Jun 15 18:30:41 2022
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5145.18 Meg
+
+ Total Signals          : 21
+ Total Nets             : 52
+ Total Signal Drivers   : 7
+ Total Blocks           : 8
+ Total Primitive Blocks : 7
+ Total Processes        : 5
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 553
+Total Line Count : 23
+In process RS_q.vhd:42 
+ 
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 4673.32 Meg
+
+Wed Jun 15 18:33:02 2022
+

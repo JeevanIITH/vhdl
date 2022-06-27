@@ -1,0 +1,527 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Diviser.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Diviser.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Diviser"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : Diviser
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\vhdl_test_ise-\Division\mem.vhd" into library work
+Parsing entity <mem>.
+Parsing architecture <Behavioral> of entity <mem>.
+Parsing VHDL file "D:\vhdl_test_ise-\Division\LS_Q.vhd" into library work
+Parsing entity <ls_q>.
+Parsing architecture <Behavioral> of entity <ls_q>.
+Parsing VHDL file "D:\vhdl_test_ise-\Division\LS_M.vhd" into library work
+Parsing entity <ls_m>.
+Parsing architecture <Behavioral> of entity <ls_m>.
+Parsing VHDL file "D:\vhdl_test_ise-\Division\comp_sub.vhd" into library work
+Parsing entity <comp_sub>.
+Parsing architecture <Behavioral> of entity <comp_sub>.
+Parsing VHDL file "D:\vhdl_test_ise-\Division\Diviser.vhd" into library work
+Parsing entity <Diviser>.
+Parsing architecture <Behavioral> of entity <diviser>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Diviser> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ls_m> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:1127 - "D:\vhdl_test_ise-\Division\LS_M.vhd" Line 51: Assignment to init ignored, since the identifier is never used
+
+Elaborating entity <comp_sub> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ls_q> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mem> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Diviser>.
+    Related source file is "D:\vhdl_test_ise-\Division\Diviser.vhd".
+    Summary:
+	no macro.
+Unit <Diviser> synthesized.
+
+Synthesizing Unit <ls_m>.
+    Related source file is "D:\vhdl_test_ise-\Division\LS_M.vhd".
+    Found 8-bit register for signal <pout>.
+    Found 1-bit register for signal <f>.
+    Found 8-bit register for signal <m1_st>.
+    Found 32-bit register for signal <c>.
+    Found 32-bit subtractor for signal <c[31]_GND_4_o_sub_3_OUT<31:0>> created at line 61.
+    Found 1-bit 8-to-1 multiplexer for signal <c[2]_m_st[7]_Mux_1_o> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <ls_m> synthesized.
+
+Synthesizing Unit <comp_sub>.
+    Related source file is "D:\vhdl_test_ise-\Division\comp_sub.vhd".
+WARNING:Xst:647 - Input <clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit subtractor for signal <GND_7_o_GND_7_o_sub_2_OUT<7:0>> created at line 52.
+    Found 8-bit comparator greater for signal <Q> created at line 49
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <comp_sub> synthesized.
+
+Synthesizing Unit <ls_q>.
+    Related source file is "D:\vhdl_test_ise-\Division\LS_Q.vhd".
+    Found 32-bit register for signal <c>.
+    Found 8-bit register for signal <Q>.
+    Found 8-bit register for signal <q_st>.
+    Found 32-bit adder for signal <c[31]_GND_8_o_add_0_OUT> created at line 47.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  48 D-type flip-flop(s).
+Unit <ls_q> synthesized.
+
+Synthesizing Unit <mem>.
+    Related source file is "D:\vhdl_test_ise-\Division\mem.vhd".
+    Found 8-bit register for signal <pout>.
+    Found 8-bit register for signal <reg>.
+    Found 1-bit register for signal <f>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <mem> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 10
+ 1-bit register                                        : 2
+ 32-bit register                                       : 2
+ 8-bit register                                        : 6
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 3
+ 1-bit 8-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <m1_st_7> of sequential type is unconnected in block <m_p>.
+WARNING:Xst:2677 - Node <reg_7> of sequential type is unconnected in block <stor>.
+WARNING:Xst:2677 - Node <pout_7> of sequential type is unconnected in block <stor>.
+
+Synthesizing (advanced) Unit <ls_m>.
+The following registers are absorbed into counter <c>: 1 register on signal <c>.
+Unit <ls_m> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ls_q>.
+The following registers are absorbed into counter <c>: 1 register on signal <c>.
+Unit <ls_q> synthesized (advanced).
+WARNING:Xst:2677 - Node <m1_st_7> of sequential type is unconnected in block <ls_m>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit subtractor                                      : 1
+# Counters                                             : 2
+ 32-bit down counter                                   : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 49
+ Flip-Flops                                            : 49
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 3
+ 1-bit 8-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <c_3> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_4> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_5> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_6> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_7> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_8> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_9> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_10> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_11> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_12> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_13> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_14> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_15> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_16> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_17> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_18> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_19> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_20> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_21> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_22> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_23> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_24> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_25> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_26> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_27> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_28> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_29> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_30> of sequential type is unconnected in block <ls_m>.
+WARNING:Xst:2677 - Node <c_31> of sequential type is unconnected in block <ls_m>.
+
+Optimizing unit <Diviser> ...
+
+Optimizing unit <ls_m> ...
+
+Optimizing unit <ls_q> ...
+
+Optimizing unit <mem> ...
+WARNING:Xst:2677 - Node <stor/pout_7> of sequential type is unconnected in block <Diviser>.
+WARNING:Xst:2677 - Node <stor/reg_7> of sequential type is unconnected in block <Diviser>.
+INFO:Xst:2261 - The FF/Latch <m_p/f> in Unit <Diviser> is equivalent to the following FF/Latch, which will be removed : <stor/f> 
+INFO:Xst:3203 - The FF/Latch <m_p/c_1> in Unit <Diviser> is the opposite to the following FF/Latch, which will be removed : <q_p/c_1> 
+INFO:Xst:3203 - The FF/Latch <m_p/c_2> in Unit <Diviser> is the opposite to the following FF/Latch, which will be removed : <q_p/c_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Diviser, actual ratio is 0.
+WARNING:Xst:1426 - The value init of the FF/Latch m_p/f hinder the constant cleaning in the block Diviser.
+   You should achieve better results by setting this init to 1.
+
+Final Macro Processing ...
+
+Processing Unit <Diviser> :
+	Found 2-bit shift register for signal <m_p/m1_st_6>.
+	Found 2-bit shift register for signal <m_p/m1_st_5>.
+	Found 2-bit shift register for signal <m_p/m1_st_4>.
+	Found 2-bit shift register for signal <m_p/m1_st_3>.
+	Found 2-bit shift register for signal <m_p/m1_st_2>.
+	Found 2-bit shift register for signal <m_p/m1_st_1>.
+	Found 2-bit shift register for signal <m_p/m1_st_0>.
+Unit <Diviser> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 65
+ Flip-Flops                                            : 65
+# Shift Registers                                      : 7
+ 2-bit shift register                                  : 7
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Diviser.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 162
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 30
+#      LUT2                        : 14
+#      LUT3                        : 9
+#      LUT4                        : 2
+#      LUT5                        : 7
+#      LUT6                        : 12
+#      MUXCY                       : 39
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 40
+# FlipFlops/Latches                : 72
+#      FD                          : 47
+#      FDE                         : 25
+# Shift Registers                  : 7
+#      SRLC16E                     : 7
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 16
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              72  out of  126800     0%  
+ Number of Slice LUTs:                   86  out of  63400     0%  
+    Number used as Logic:                79  out of  63400     0%  
+    Number used as Memory:                7  out of  19000     0%  
+       Number used as SRL:                7
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     92
+   Number with an unused Flip Flop:      20  out of     92    21%  
+   Number with an unused LUT:             6  out of     92     6%  
+   Number of fully used LUT-FF pairs:    66  out of     92    71%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    210    11%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 79    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.241ns (Maximum Frequency: 446.170MHz)
+   Minimum input arrival time before clock: 1.842ns
+   Maximum output required time after clock: 0.645ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 2.241ns (frequency: 446.170MHz)
+  Total number of paths / destination ports: 1021 / 110
+-------------------------------------------------------------------------
+Delay:               2.241ns (Levels of Logic = 3)
+  Source:            q_p/c_5 (FF)
+  Destination:       q_p/Q_7 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: q_p/c_5 to q_p/Q_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.697  q_p/c_5 (q_p/c_5)
+     LUT6:I0->O            1   0.097   0.556  q_p/GND_8_o_c[31]_equal_2_o<31>2 (q_p/GND_8_o_c[31]_equal_2_o<31>1)
+     LUT6:I2->O            8   0.097   0.327  q_p/GND_8_o_c[31]_equal_2_o<31>7_rstpot (q_p/GND_8_o_c[31]_equal_2_o<31>7_rstpot)
+     LUT3:I2->O            1   0.097   0.000  q_p/Q_0_dpot (q_p/Q_0_dpot)
+     FDE:D                     0.008          q_p/Q_0
+    ----------------------------------------
+    Total                      2.241ns (0.660ns logic, 1.581ns route)
+                                       (29.4% logic, 70.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 137 / 9
+-------------------------------------------------------------------------
+Offset:              1.842ns (Levels of Logic = 4)
+  Source:            D<0> (PAD)
+  Destination:       q_p/q_st_0 (FF)
+  Destination Clock: clock rising
+
+  Data Path: D<0> to q_p/q_st_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.697  D_0_IBUF (D_0_IBUF)
+     LUT6:I0->O            1   0.097   0.279  q_s2 (q_s1)
+     MUXF7:S->O            8   0.335   0.327  q_s1 (q_s2)
+     LUT5:I4->O            1   0.097   0.000  q_s21 (q_s)
+     FD:D                      0.008          q_p/q_st_0
+    ----------------------------------------
+    Total                      1.842ns (0.538ns logic, 1.304ns route)
+                                       (29.2% logic, 70.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 1)
+  Source:            q_p/Q_7 (FF)
+  Destination:       Q<7> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: q_p/Q_7 to Q<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.361   0.283  q_p/Q_7 (q_p/Q_7)
+     OBUF:I->O                 0.000          Q_7_OBUF (Q<7>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    2.241|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.50 secs
+ 
+--> 
+
+Total memory usage is 4613412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   38 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

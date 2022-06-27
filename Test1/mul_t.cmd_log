@@ -1,0 +1,2 @@
+vhdtdtfi -prj Test1 -o D:/vhdl_test_ise-/Test1/mul_t.vhi -module mul_t -template J:/xilinx_ise/14.1/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work sum.vhd -lib work RS_q.vhd -lib work left_shift_8_bit.vhd -lib work clock.vhd -lib work mul_t.vhd 
+xst -intstyle ise -ifn "D:/vhdl_test_ise-/Test1/mul_t.xst" -ofn "D:/vhdl_test_ise-/Test1/mul_t.syr" 

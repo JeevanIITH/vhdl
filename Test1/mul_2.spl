@@ -1,0 +1,8 @@
+[Inputs]
+clk
+str
+=q[3:0]=
+=m[3:0]=
+[Outputs]
+=product[7:0]=
+[BiDir]

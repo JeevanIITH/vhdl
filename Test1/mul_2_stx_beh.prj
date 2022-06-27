@@ -1,0 +1,4 @@
+vhdl isim_temp "sum.vhd"
+vhdl isim_temp "RS_q.vhd"
+vhdl isim_temp "left_shift_8_bit.vhd"
+vhdl isim_temp "mul_2.vhd"
